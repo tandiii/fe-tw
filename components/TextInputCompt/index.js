@@ -4,7 +4,7 @@ import { useState } from "react";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-const TextInputCompt = ({placeholder,secureTextEntry,onChangeText,height,textAlignVertical,multiline,passIcon}) =>{
+const TextInputCompt = ({placeholder,secureTextEntry,onChangeText,height,textAlignVertical,multiline,passIcon,value}) =>{
   const [show,setShow] = useState(true);
   
     return (
@@ -16,7 +16,7 @@ const TextInputCompt = ({placeholder,secureTextEntry,onChangeText,height,textAli
         multiline={multiline}
         defaultValue=""
         onChangeText={onChangeText}
-        // value={text}
+        value={value}
       />
        
       {

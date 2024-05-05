@@ -18,11 +18,13 @@ const Login = ({ navigation }) => {
         setLoading(true);
       
         try {
-            const res = await axios.post(`${process.env.GLOBAL_URL}/user/login`, {
+            const res = await axios.post(
+              `https://01e4-180-241-70-22.ngrok-free.app/user/login`,
+              {
                 email: email,
-                password: pass
-            });
-            console.log("TESTT:::", res)
+                password: pass,
+              }
+            );
             setEmail("")
             setPass("")
             SyncStorage.set("user", res?.data);
